@@ -1,0 +1,78 @@
+/* Custom styles for Vintage Times */
+
+
+/* Base layout classes */
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 3.75vw;
+    padding-right: 3.75vw;
+  }
+}
+
+/* Typography fallbacks */
+.heading-1 {
+  font-family: inherit;
+}
+
+.heading-2 {
+  font-family: inherit;
+}
+
+.subtitle {
+  font-family: inherit;
+  font-size: 0.875rem;
+}
+
+.description {
+  font-family: inherit;
+  font-size: 0.875rem;
+}
+
+.subheading {
+  font-family: inherit;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin infinite linear;
+}
+
+/* Header specific */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--background);
+  padding: 1rem 0;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Global utility for Lenis if used */
+.lock {
+  overflow: hidden;
+}
