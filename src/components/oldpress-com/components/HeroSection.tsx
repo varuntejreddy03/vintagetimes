@@ -6,10 +6,10 @@ export default function HeroSection() {
         <picture className="absolute inset-0">
           <source
             media="(max-width: 991px)"
-            srcSet="https://oldpress.com/wp-content/uploads/2025/06/4-mobile.webp"
+            srcSet="/compressed_website6.jpg.jpeg"
           />
           <img
-            src="https://oldpress.com/wp-content/uploads/2025/06/4-desktop-scaled.webp"
+            src="/compressed_website6.jpg.jpeg"
             alt="Vintage moments"
             className="absolute top-0 left-0 w-full h-full object-cover"
           />

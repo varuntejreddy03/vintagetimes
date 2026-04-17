@@ -220,7 +220,7 @@ export default function ContactForm() {
                       opacity: (!userName || !userMail || !userPhone) ? 0.3 : 1,
                     }}
                   >
-                    <span style={{ borderBottom: '1px solid #9b4136', paddingBottom: '2px' }}>Make it your memory</span>
+                    <span style={{ borderBottom: '1px solid #9b4136', paddingBottom: '2px' }}>Be the headline</span>
                     <span>↗</span>
                   </button>
                   <p style={{ fontSize: '11px', color: '#b0b0b0', fontFamily: "'Onest', sans-serif" }}>
@@ -238,9 +238,6 @@ export default function ContactForm() {
                 <div style={{ display: 'flex', gap: '1rem' }}>
                   <a href="https://wa.me/917075746236" target="_blank" rel="noreferrer" style={{ width: '44px', height: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#222020', color: 'white', borderRadius: '50%' }}>
                     <svg style={{ width: '22px', height: '22px' }} fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.038 3.069l-.469 2.355 2.441-.471c.705.4 1.761.644 2.757.644l.001.001c3.182 0 5.768-2.586 5.768-5.766a5.756 5.756 0 00-5.768-5.768zm3.449 8.212c-.149.42-.746.764-1.028.814-.247.043-.568.077-1.603-.314-1.319-.498-2.103-1.834-2.17-1.922-.066-.088-.539-.718-.539-1.37s.341-.971.463-1.104c.12-.132.261-.166.348-.166s.174.001.249.005c.081.003.19-.033.298.228.114.277.391.956.424 1.022.033.066.054.144.011.23-.043.088-.066.144-.132.221-.066.077-.139.172-.198.235-.066.066-.135.138-.058.269.077.132.341.562.732.91.503.448.928.587 1.059.654.131.066.208.054.285-.033.077-.087.327-.384.414-.515.088-.131.174-.11.294-.066l1.206.6c.121.054.2.088.23.131.028.046.028.264-.121.684z" /></svg>
-                  </a>
-                  <a href="#" style={{ width: '44px', height: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#222020', color: 'white', borderRadius: '50%' }}>
-                    <svg style={{ width: '22px', height: '22px' }} fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.35-.01-1.02-.2-1.51-.36-.61-.2-1.1-.31-1.05-.66.02-.18.27-.36.75-.56 2.93-1.27 4.88-2.11 5.86-2.5 2.79-1.11 3.37-1.3 3.75-1.3.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z" /></svg>
                   </a>
                 </div>
               </div>

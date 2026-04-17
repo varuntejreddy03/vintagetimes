@@ -17,7 +17,6 @@ export default function Footer() {
   const socialLinks = [
     { title: "Instagram", href: "https://instagram.com/vintagetimes.in" },
     { title: "Facebook", href: "https://facebook.com/vintagetimes" },
-    { title: "Tik Tok", href: "https://tiktok.com/@vintagetimes" },
   ];
 
   return (
@@ -84,12 +83,16 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Large Logo */}
+
+        {/* Logo Image Only */}
         <div className="footer__logo w-full mt-20 md:mt-32 border-t border-gray-100 pt-10">
           <div className="flex justify-center items-center py-10 md:py-20">
-            <span className="font-serif text-[12vw] md:text-[8rem] lg:text-[10rem] font-black tracking-tighter uppercase text-[#222020] leading-none select-none">
-              Vintage <span className="font-playfair italic normal-case font-medium -ml-[2vw] md:-ml-8">Times</span>
-            </span>
+            <img
+              src="/WEBSITE12-Photoroom.png"
+              alt="Vintage Times Logo"
+              className="footer-logo-img select-none"
+              draggable="false"
+            />
           </div>
         </div>
 

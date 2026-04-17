@@ -8,7 +8,7 @@ export default function PhotosSection() {
             <div className="photos__image sticky flex justify-center items-center min-h-[70vh] max-w-[70vw] mx-auto bottom-[1.25vw] md:bottom-0" style={{ zIndex: 10 }}>
               <img
                 decoding="async"
-                src="https://oldpress.com/wp-content/uploads/2025/06/IMG_1679-scaled.webp"
+                src="/compressed_website5.jpg.jpeg"
                 alt="Image 1"
                 className="absolute top-0 left-0 w-full h-full object-contain"
                 style={{ transform: 'translate(2.06vw, -2.68vh)' }}
@@ -18,7 +18,7 @@ export default function PhotosSection() {
             <div className="photos__image sticky flex justify-center items-center min-h-[70vh] max-w-[70vw] mx-auto bottom-[1.25vw] md:bottom-0" style={{ zIndex: 9 }}>
               <img
                 decoding="async"
-                src="https://oldpress.com/wp-content/uploads/2025/06/photo_2025-02-24-22.48.43.webp"
+                src="/compressed_WEBSITE7.jpg.jpeg"
                 alt="Image 2"
                 className="absolute top-0 left-0 w-full h-full object-contain"
                 style={{ transform: 'translate(-3.8vw, 1.45vh)' }}
@@ -28,7 +28,7 @@ export default function PhotosSection() {
             <div className="photos__image sticky flex justify-center items-center min-h-[70vh] max-w-[70vw] mx-auto bottom-[1.25vw] md:bottom-0" style={{ zIndex: 8 }}>
               <img
                 decoding="async"
-                src="https://oldpress.com/wp-content/uploads/2025/06/IMG_1673-scaled.webp"
+                src="/compressed_WEBSITE8.jpg.jpeg"
                 alt="Image 3"
                 className="absolute top-0 left-0 w-full h-full object-contain"
                 style={{ transform: 'translate(3.49vw, -0.49vh)' }}
@@ -38,7 +38,7 @@ export default function PhotosSection() {
             <div className="photos__image sticky flex justify-center items-center min-h-[70vh] max-w-[70vw] mx-auto bottom-[1.25vw] md:bottom-0" style={{ zIndex: 7 }}>
               <img
                 decoding="async"
-                src="https://oldpress.com/wp-content/uploads/2025/06/IMG_2048-scaled.webp"
+                src="/website15.jpeg"
                 alt="Image 4"
                 className="absolute top-0 left-0 w-full h-full object-contain"
                 style={{ transform: 'translate(4.61vw, -0.83vh)' }}
@@ -48,7 +48,7 @@ export default function PhotosSection() {
             <div className="photos__image sticky flex justify-center items-center min-h-[70vh] max-w-[70vw] mx-auto bottom-[1.25vw] md:bottom-0" style={{ zIndex: 6 }}>
               <img
                 decoding="async"
-                src="https://oldpress.com/wp-content/uploads/2025/06/IMG_9433.webp"
+                src="/compressed_website16.jpg.jpeg"
                 alt="Image 5"
                 className="absolute top-0 left-0 w-full h-full object-contain"
                 style={{ transform: 'translate(3.41vw, -0.85vh)' }}
@@ -58,7 +58,7 @@ export default function PhotosSection() {
             <div className="photos__image sticky flex justify-center items-center min-h-[70vh] max-w-[70vw] mx-auto bottom-[1.25vw] md:bottom-0" style={{ zIndex: 5 }}>
               <img
                 decoding="async"
-                src="https://oldpress.com/wp-content/uploads/2025/06/IMG_6276-scaled-e1751011460519.webp"
+                src="/WEBSITE 9.png"
                 alt="Image 6"
                 className="absolute top-0 left-0 w-full h-full object-contain"
                 style={{ transform: 'translate(-4.19vw, -2.55vh)' }}
@@ -68,7 +68,7 @@ export default function PhotosSection() {
             <div className="photos__image sticky flex justify-center items-center min-h-[70vh] max-w-[70vw] mx-auto bottom-[1.25vw] md:bottom-0" style={{ zIndex: 4 }}>
               <img
                 decoding="async"
-                src="https://oldpress.com/wp-content/uploads/2025/06/IMG_5930-scaled.webp"
+                src="/WEBSITE10.png"
                 alt="Image 7"
                 className="absolute top-0 left-0 w-full h-full object-contain"
                 style={{ transform: 'translate(-2.21vw, 4.24vh)' }}
@@ -78,7 +78,7 @@ export default function PhotosSection() {
             <div className="photos__image sticky flex justify-center items-center min-h-[70vh] max-w-[70vw] mx-auto bottom-[1.25vw] md:bottom-0" style={{ zIndex: 3 }}>
               <img
                 decoding="async"
-                src="https://oldpress.com/wp-content/uploads/2025/06/photo_2025-04-17_11-57-28.webp"
+                src="/compressed_website17.jpg.jpeg"
                 alt="Image 8"
                 className="absolute top-0 left-0 w-full h-full object-contain"
                 style={{ transform: 'translate(-4.04vw, 0.59vh)' }}
@@ -88,7 +88,7 @@ export default function PhotosSection() {
             <div className="photos__image sticky flex justify-center items-center min-h-[70vh] max-w-[70vw] mx-auto bottom-[1.25vw] md:bottom-0" style={{ zIndex: 2 }}>
               <img
                 decoding="async"
-                src="https://oldpress.com/wp-content/uploads/2025/06/IMG_2837.webp"
+                src="/WhatsApp Image 2026-04-08 at 6.07.05 PM.jpeg"
                 alt="Image 9"
                 className="absolute top-0 left-0 w-full h-full object-contain"
                 style={{ transform: 'translate(3.71vw, 1.56vh)' }}

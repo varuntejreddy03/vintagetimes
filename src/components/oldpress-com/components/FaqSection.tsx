@@ -19,7 +19,7 @@ export default function FAQ() {
             <ol className="faq__list">
               <FAQItem
                 question="What is Vintage Times and how does it work?"
-                answer="Vintage Times is India's first nostalgia-commerce ecosystem. We transform live moments into personalised, vintage newspaper prints — a tactile memory artifact designed for emotional value, display, gifting, and virality."
+                answer="Turning live moments into vintage newspaper memories. Personalised. Emotional. Viral-worthy."
                 needsExpand={false}
               />
 
@@ -50,7 +50,7 @@ export default function FAQ() {
 
               <FAQItem
                 question="Can the newspaper design be customized?"
-                answer="Absolutely! Every event gets a custom headline like 'Be the headline today'. We also integrate your event logos, QR codes for digital copies, and specific storytelling details to make it a unique front-page news artifact."
+                answer="Absolutely! Every event gets a custom headline like 'Be the headline'. We also integrate your event logos, QR codes for digital copies, and specific storytelling details to make it a unique front-page news artifact."
                 needsExpand={false}
               />
 

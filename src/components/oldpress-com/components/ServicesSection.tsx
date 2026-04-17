@@ -4,58 +4,44 @@ export default function ServicesSection() {
   const services = [
     {
       title: 'Vintage wedding memories',
-      image: 'https://oldpress.com/wp-content/uploads/2025/06/Vintage-wedding-memories.webp',
+      image: '/compressed_website2.jpg.jpeg',
       alt: 'Wedding and B2C',
       description: [
-        '– ELEGANT PHOTOGRAPHERS MATCH YOUR WEDDING STYLE',
-        '– RETRO NEWSPAPERS = UNIQUE KEEPSAKES FOR GUESTS',
-        '– ALL PHOTOS ARE SAVED & CAN BE RESENT DIGITALLY',
-        '– FITS INTO ANY VENUE: 0.5 M², NO POWER OR INTERNET NEEDED',
-        '– INSTANT PRINT: NEWSPAPERS PRINTED IN 7 SECONDS',
-        '– UP TO 100 CUSTOM PRINTS PER HOUR',
+        'ELEGANT PHOTOGRAPHERS MATCH YOUR WEDDING STYLE',
+        'RETRO NEWSPAPERS = UNIQUE KEEPSAKES FOR GUESTS',
+        'ALL PHOTOS ARE SAVED & CAN BE RESENT DIGITALLY',
+        'FITS INTO ANY VENUE: 0.5 M², NO POWER OR INTERNET NEEDED',
+        'INSTANT PRINT: NEWSPAPERS PRINTED IN 7 SECONDS',
+        'UP TO 100 CUSTOM PRINTS PER HOUR',
         'AUTONOMOUS. ELEGANT. UNFORGETTABLE.'
       ]
     },
     {
       title: 'Corporate events experience',
-      image: 'https://oldpress.com/wp-content/uploads/2025/06/Corporate-events-experience.webp',
+      image: '/compressed_website1.jpg.jpeg',
       alt: 'Corporate and B2B',
       description: [
-        '– CUSTOM BRANDED HEADLINES FOR YOUR COMPANY',
-        '– HIGH ENGAGEMENT FOR CORPORATE MARKETING',
-        '– PROFESSIONAL LIGHTING & SETUP INCLUDED',
-        '– PERFECT FOR PRODUCT LAUNCHES & ROADSHOWS',
-        '– DATA ACCUMULATION FOR DIGITAL MARKETING',
-        '– SEAMLESS INTEGRATION INTO EVENT FLOW',
+        'CUSTOM BRANDED HEADLINES FOR YOUR COMPANY',
+        'HIGH ENGAGEMENT FOR CORPORATE MARKETING',
+        'PROFESSIONAL LIGHTING & SETUP INCLUDED',
+        'PERFECT FOR PRODUCT LAUNCHES & ROADSHOWS',
+        'DATA ACCUMULATION FOR DIGITAL MARKETING',
+        'SEAMLESS INTEGRATION INTO EVENT FLOW',
         'PROFESSIONAL. BRANDED. ENGAGING.'
       ]
     },
     {
       title: 'Festival & Large scale events',
-      image: 'https://oldpress.com/wp-content/uploads/2025/06/Festival-retro-moments.webp',
+      image: '/compressed_website.jpg.jpeg',
       alt: 'Commercial activations',
       description: [
-        '– HIGH CAPACITY PRINTING SYSTEM',
-        '– MOBILE GEAR FOR STREET PHOTO MAGIC',
-        '– WEATHERPROOF INDOOR & OUTDOOR SETUP',
-        '– VIRAL SOCIAL MEDIA SHARING INCLUDED',
-        '– SPONSOR BRANDING ON EVERY NEWSPAPER',
-        '– DUAL PRINTER SYSTEM FOR MAX SPEED',
+        'HIGH CAPACITY PRINTING SYSTEM',
+        'MOBILE GEAR FOR STREET PHOTO MAGIC',
+        'WEATHERPROOF INDOOR & OUTDOOR SETUP',
+        'VIRAL SOCIAL MEDIA SHARING INCLUDED',
+        'SPONSOR BRANDING ON EVERY NEWSPAPER',
+        'DUAL PRINTER SYSTEM FOR MAX SPEED',
         'SCALABLE. VIRAL. IMMERSIVE.'
-      ]
-    },
-    {
-      title: 'Live Retail & Mall Kiosks',
-      image: 'https://oldpress.com/wp-content/uploads/2025/06/Celebrations-more.webp',
-      alt: 'Mall kiosks',
-      description: [
-        '– PERMANENT KIOSK AT HIGH TRAFFIC LOCATIONS',
-        '– BOOSTS MALL CUSTOMER DWELL TIME',
-        '– LOW MAINTENANCE AUTONOMOUS OPERATION',
-        '– ATTRACTIVE VINTAGE AESTHETIC DESIGN',
-        '– CUSTOM THEMES FOR HOLIDAYS & SEASONS',
-        '– INTEGRATED PAYMENT OPTIONS',
-        'PERMANENT. STYLISH. PROFITABLE.'
       ]
     }
   ];
@@ -63,7 +49,6 @@ export default function ServicesSection() {
   return (
     <section className="services-wrapper py-16 md:py-32" id="services">
       <div className="services">
-        {/* Header */}
         <div className="services__top mb-8 md:mb-12 border-b border-gray-100 pb-8">
           <div className="container mx-auto px-5 md:px-20">
             <div className="services__body">
@@ -74,9 +59,8 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        {/* Services Horizontal Scroll on Mobile */}
         <div className="services__content">
-          <div className="services__slider overflow-x-auto no-scrollbar snap-x snap-mandatory flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 px-5 md:px-20 pb-10">
+          <div className="services__slider overflow-x-auto no-scrollbar snap-x snap-mandatory flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-20 pb-10">
             {services.map((service, index) => (
               <ServiceSlide key={index} service={service} index={index} />
             ))}
@@ -102,8 +86,7 @@ function ServiceSlide({ service }: { service: any; index: number }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleCardTap = () => {
-    // Toggle expanded state on tap (for mobile)
-    setIsExpanded(prev => !prev);
+    setIsExpanded((prev) => !prev);
   };
 
   return (
@@ -120,7 +103,6 @@ function ServiceSlide({ service }: { service: any; index: number }) {
             alt={service.alt}
             className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
           />
-          {/* Tap indicator for mobile */}
           <div className={`absolute bottom-3 right-3 w-8 h-8 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center md:hidden transition-transform duration-300 ${isExpanded ? 'rotate-45' : 'rotate-0'}`}>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#222020" strokeWidth="2" strokeLinecap="round">
               <line x1="7" y1="2" x2="7" y2="12" />
@@ -134,13 +116,16 @@ function ServiceSlide({ service }: { service: any; index: number }) {
             <span>{service.title}</span>
             <svg
               className={`w-4 h-4 text-[#9d9a95] md:hidden transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
-              viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
             >
               <path d="M6 9l6 6 6-6" />
             </svg>
           </div>
 
-          {/* Info - visible on tap (mobile) or hover (desktop) */}
           <div
             className={`services-card__info flex flex-col gap-6 transition-all duration-500 ease-in-out overflow-hidden
               md:opacity-0 md:translate-y-4 md:max-h-0 md:group-hover:opacity-100 md:group-hover:translate-y-0 md:group-hover:max-h-[600px]
@@ -157,7 +142,7 @@ function ServiceSlide({ service }: { service: any; index: number }) {
               className="link flex items-center gap-2 text-sm md:text-base font-medium transition-all group/link"
             >
               <span className="relative pb-0.5 border-b border-[#222020]">
-                Get in touch
+                Be the headline
               </span>
               <svg className="w-4 h-4 transform group-hover/link:translate-x-1 transition-transform" viewBox="0 0 18 18" fill="none">
                 <path d="M1 17L17 1M17 1H1M17 1V17" stroke="currentColor" strokeWidth="2" />

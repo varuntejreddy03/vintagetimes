@@ -1,3 +1,18 @@
+/* Large footer logo image */
+.footer-logo-img {
+  width: 80vw;
+  max-width: 1200px;
+  min-width: 320px;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .footer-logo-img {
+    width: 60vw;
+    min-width: 480px;
+  }
+}
 /* Custom styles for Vintage Times */
 
 
@@ -55,6 +70,28 @@
 
 .animate-spin {
   animation: spin infinite linear;
+}
+
+@keyframes infoStarFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate3d(0, -8px, 0) rotate(4deg);
+  }
+}
+
+.info-star-motion {
+  animation: infoStarFloat 4.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .info-star-motion {
+    animation: none;
+  }
 }
 
 /* Header specific */

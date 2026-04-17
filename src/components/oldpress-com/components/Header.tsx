@@ -3,45 +3,59 @@
 
 import { useState, useEffect } from 'react';
 
+const menuItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '#services' },
+  { label: 'Reviews', href: '#experiences' },
+  { label: 'Business', href: '#business' },
+  { label: 'Faq', href: '#faq' },
+];
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const menuItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Services', href: '#services' },
-    { label: 'Reviews', href: '#experiences' },
-    { label: 'Business', href: '#business' },
-    { label: 'Faq', href: '#faq' },
-  ];
+  const closeMenu = () => setIsMenuOpen(false);
 
   // Prevent scroll when menu is open
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = previousOverflow;
     }
+
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const onEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', onEscape);
+    return () => {
+      document.removeEventListener('keydown', onEscape);
     };
   }, [isMenuOpen]);
 
   return (
     <>
       <header className="fixed top-0 left-0 w-full z-[108] bg-white/90 backdrop-blur-md border-b border-[#eee]">
-        <div className="container flex items-center justify-between py-3 md:py-4 mx-auto px-5">
+        <div className="container flex items-center justify-between py-2 md:py-3 mx-auto px-5">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group relative z-[110]">
-            <img src="/logo.svg" alt="Vintage Times" className="w-8 h-8 md:w-10 md:h-10" />
-            <div className="flex flex-col items-center border-y border-[#222020] py-0.5 px-2 md:px-4">
-              <span className="font-serif text-base md:text-xl lg:text-2xl font-black tracking-[0.2em] uppercase text-[#222020] leading-none mb-0.5">
-                Vintage
-              </span>
-              <div className="w-full h-[1px] bg-[#222020] opacity-30 transform scale-x-75"></div>
-              <span className="font-playfair italic text-[10px] md:text-md font-medium text-[#222020] leading-none mt-0.5">
-                Times
-              </span>
-            </div>
+          <a href="/" className="group relative z-[110]">
+            <img
+              src="/WEBSITE12-Photoroom.png"
+              alt="Vintage Times"
+              className="h-10 w-auto object-contain md:h-12"
+            />
           </a>
 
           {/* Navigation - Desktop */}
@@ -90,6 +104,8 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden relative z-[110] w-10 h-10 flex items-center justify-center"
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {isMenuOpen ? (
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222020" strokeWidth="2" strokeLinecap="round">
@@ -114,15 +130,19 @@ export default function Header() {
           : 'opacity-0 pointer-events-none'
           }`}
         style={{ backgroundColor: '#faf9f6' }}
+        onClick={closeMenu}
       >
         {/* Solid background fill to prevent bleed-through */}
         <div className="absolute inset-0" style={{ backgroundColor: '#faf9f6' }}></div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col h-full pt-24 px-8 pb-10 justify-between safe-area-inset">
+        <div
+          className="relative z-10 flex flex-col h-full pt-24 px-8 pb-10 justify-between safe-area-inset"
+          onClick={(event) => event.stopPropagation()}
+        >
 
           {/* Navigation Links */}
-          <nav className="flex-1 flex flex-col justify-center">
+          <nav id="mobile-navigation" className="flex-1 flex flex-col justify-center">
             <ul className="flex flex-col gap-1">
               {menuItems.map((item, index) => (
                 <li
@@ -136,8 +156,9 @@ export default function Header() {
                 >
                   <a
                     href={item.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="block py-3 text-[2rem] font-serif font-black uppercase text-[#222020] tracking-tight hover:text-[#9b4136] transition-colors active:scale-[0.98]"
+                    onClick={closeMenu}
+                    className="block py-2 text-[2.15rem] font-normal italic leading-[1.05] text-[#222020] hover:text-[#9b4136] transition-colors active:scale-[0.98]"
+                    style={{ fontFamily: "'Times New Roman', 'Iowan Old Style', Georgia, serif" }}
                   >
                     {item.label}
                   </a>
@@ -161,7 +182,7 @@ export default function Header() {
             {/* CTA Button */}
             <a
               href="#form"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
               className="w-full py-4 text-center font-bold tracking-[0.15em] text-[13px] uppercase rounded-full transition-all active:scale-[0.97]"
               style={{ backgroundColor: '#222020', color: '#ffffff' }}
             >
